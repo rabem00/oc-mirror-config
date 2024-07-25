@@ -18,71 +18,78 @@ mirror:
       - name: stable-4.15
         type: ocp
         shortestPath: true
-      - name: stable-4.16
-        type: ocp
-        shortestPath: true
+      # - name: stable-4.16
+      #   type: ocp
+      #   shortestPath: true
   operators:
     - catalog: registry.redhat.io/redhat/certified-operator-index:v4.14
       packages:
         - name: minio-operator
           channels:
             - name: stable
-    - catalog: registry.redhat.io/redhat/redhat-operator-index:v4.15
+    - catalog: registry.redhat.io/redhat/certified-operator-index:v4.15
       packages:
-        - name: serverless-operator
+        - name: minio-operator
           channels:
             - name: stable
-        - name: metallb-operator
-          channels:
-            - name: stable
-        - name: servicemeshoperator
-          channels:
-            - name: stable
-        - name: cluster-logging
-          channels:
-            - name: stable-5.8
-        - name: devspaces
-          channels:
-            - name: stable
-        - name: openshift-gitops-operator
-          channels:
-            - name: latest
-        - name: openshift-pipelines-operator-rh
-          channels:
-            - name: latest
-        - name: rhsso-operator
-          channels:
-            - name: stable
-        - name: cincinnati-operator
-          channels:
-            - name: v1
-        - name: advanced-cluster-management
-          channels:
-            - name: release-2.11
-        - name: ansible-automation-platform-operator
-          channels:
-            - name: stable-2.4-cluster-scoped      
-        - name: loki-operator
-          channels:
-            - name: stable-5.8
-        - name: netobserv-operator
-          channels:
-            - name: stable
-        - name: multicluster-engine
-          channels:
-            - name: stable-2.5 
-        - name: multicluster-global-hub-operator-rh
-          channels:
-            - name: release-1.1
-        - name: odf-multicluster-orchestrator
-          channels:
-            - name: stable-4.15
-        - name: odf-csi-addons-operator
-          channels:
-            - name: stable-4.15
-        - name: odf-operator
-          channels:
-            - name: stable-4.15
+    - catalog: registry.redhat.io/redhat/redhat-operator-index:v4.14
+      full: true
+    - catalog: registry.redhat.io/redhat/redhat-operator-index:v4.15
+      full: true
+        # - name: serverless-operator
+        #   channels:
+        #     - name: stable
+        # - name: metallb-operator
+        #   channels:
+        #     - name: stable
+        # - name: servicemeshoperator
+        #   channels:
+        #     - name: stable
+        # - name: cluster-logging
+        #   channels:
+        #     - name: stable-5.8
+        # - name: devspaces
+        #   channels:
+        #     - name: stable
+        # - name: openshift-gitops-operator
+        #   channels:
+        #     - name: latest
+        # - name: openshift-pipelines-operator-rh
+        #   channels:
+        #     - name: latest
+        # - name: rhsso-operator
+        #   channels:
+        #     - name: stable
+        # - name: cincinnati-operator
+        #   channels:
+        #     - name: v1
+        # - name: advanced-cluster-management
+        #   channels:
+        #     - name: release-2.11
+        # - name: ansible-automation-platform-operator
+        #   channels:
+        #     - name: stable-2.4-cluster-scoped      
+        # - name: loki-operator
+        #   channels:
+        #     - name: stable-5.8
+        # - name: netobserv-operator
+        #   channels:
+        #     - name: stable
+        # - name: multicluster-engine
+        #   channels:
+        #     - name: stable-2.5 
+        # - name: multicluster-global-hub-operator-rh
+        #   channels:
+        #     - name: release-1.1
+        # - name: odf-multicluster-orchestrator
+        #   channels:
+        #     - name: stable-4.15
+        # - name: odf-csi-addons-operator
+        #   channels:
+        #     - name: stable-4.15
+        # - name: odf-operator
+        #   channels:
+        #     - name: stable-4.15
   additionalImages:
     - name: registry.redhat.io/ubi8/ubi:latest
   helm: {}
