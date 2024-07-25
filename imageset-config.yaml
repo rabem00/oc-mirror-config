@@ -18,24 +18,70 @@ mirror:
       - name: stable-4.15
         type: ocp
         shortestPath: true
-      # - name: stable-4.16
-      #   type: ocp
-      #   shortestPath: true
   operators:
     - catalog: registry.redhat.io/redhat/certified-operator-index:v4.14
       packages:
         - name: minio-operator
           channels:
             - name: stable
+        - name: neuvector-certified-operator
+          channels:
+            - name: beta
     - catalog: registry.redhat.io/redhat/certified-operator-index:v4.15
       packages:
         - name: minio-operator
           channels:
             - name: stable
+        - name: minio-operator
+          channels:
+            - name: beta
     - catalog: registry.redhat.io/redhat/redhat-operator-index:v4.14
       full: true
+      packages:
+        - name: serverless-operator
+        - name: metallb-operator
+        - name: servicemeshoperator
+        - name: cluster-logging
+        - name: devspaces
+        - name: openshift-gitops-operator
+        - name: openshift-pipelines-operator-rh
+        - name: rhsso-operator
+        - name: cincinnati-operator
+        - name: advanced-cluster-management
+        - name: ansible-automation-platform-operator
+        - name: loki-operator
+        - name: netobserv-operator
+        - name: multicluster-engine
+        - name: multicluster-global-hub-operator-rh
+        - name: odf-multicluster-orchestrator
+        - name: odf-csi-addons-operator
+        - name: odf-operator
     - catalog: registry.redhat.io/redhat/redhat-operator-index:v4.15
       full: true
+      packages:
+        - name: serverless-operator
+        - name: metallb-operator
+        - name: servicemeshoperator
+        - name: cluster-logging
+        - name: devspaces
+        - name: openshift-gitops-operator
+        - name: openshift-pipelines-operator-rh
+        - name: rhsso-operator
+        - name: cincinnati-operator
+        - name: advanced-cluster-management
+        - name: ansible-automation-platform-operator
+        - name: loki-operator
+        - name: netobserv-operator
+        - name: multicluster-engine
+        - name: multicluster-global-hub-operator-rh
+        - name: odf-multicluster-orchestrator
+        - name: odf-csi-addons-operator
+        - name: odf-operator
+  additionalImages:
+    - name: registry.redhat.io/ubi8/ubi:latest
+  helm: {}
+
+
         # - name: serverless-operator
         #   channels:
         #     - name: stable
@@ -90,6 +136,3 @@ mirror:
         # - name: odf-operator
         #   channels:
         #     - name: stable-4.15
-  additionalImages:
-    - name: registry.redhat.io/ubi8/ubi:latest
-  helm: {}
