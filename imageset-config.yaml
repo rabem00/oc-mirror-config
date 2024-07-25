@@ -58,7 +58,7 @@ mirror:
             - name: v1
         - name: advanced-cluster-management
           channels:
-            - name: release-2.10
+            - name: release-2.11
         - name: ansible-automation-platform-operator
           channels:
             - name: stable-2.4-cluster-scoped      
