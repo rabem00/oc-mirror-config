@@ -30,7 +30,6 @@ mirror:
         - name: minio-operator
         - name: neuvector-certified-operator
     - catalog: registry.redhat.io/redhat/redhat-operator-index:v4.14
-      full: true
       packages:
         - name: serverless-operator
         - name: metallb-operator
@@ -71,11 +70,6 @@ mirror:
         - name: odf-multicluster-orchestrator
         - name: odf-csi-addons-operator
         - name: odf-operator
-  additionalImages:
-    - name: registry.redhat.io/ubi8/ubi:latest
-  helm: {}
-
-
         # - name: serverless-operator
         #   channels:
         #     - name: stable
@@ -130,3 +124,6 @@ mirror:
         # - name: odf-operator
         #   channels:
         #     - name: stable-4.15
+  additionalImages:
+    - name: registry.redhat.io/ubi8/ubi:latest
+  helm: {}
