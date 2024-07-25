@@ -50,7 +50,6 @@ mirror:
         - name: odf-csi-addons-operator
         - name: odf-operator
     - catalog: registry.redhat.io/redhat/redhat-operator-index:v4.15
-      full: true
       packages:
         - name: serverless-operator
         - name: metallb-operator
