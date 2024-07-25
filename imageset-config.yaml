@@ -20,21 +20,15 @@ mirror:
         shortestPath: true
   operators:
     - catalog: registry.redhat.io/redhat/certified-operator-index:v4.14
+      full: true
       packages:
         - name: minio-operator
-          channels:
-            - name: stable
         - name: neuvector-certified-operator
-          channels:
-            - name: beta
     - catalog: registry.redhat.io/redhat/certified-operator-index:v4.15
+      full: true
       packages:
         - name: minio-operator
-          channels:
-            - name: stable
         - name: neuvector-certified-operator
-          channels:
-            - name: beta
     - catalog: registry.redhat.io/redhat/redhat-operator-index:v4.14
       full: true
       packages:
